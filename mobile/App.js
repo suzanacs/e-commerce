@@ -7,15 +7,17 @@
  */
 
 import React from 'react';
-import {View, Button, Text} from 'react-native';
+import {View} from 'react-native';
+
+
 import Routes from './src/routes'
 
-
-const App = () => {
+const App = () => { 
+  
   return (
-   <View>
-   <Routes/>
-   </View>
+    <>
+      <Routes />
+    </>
   );
 };
 

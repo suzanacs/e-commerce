@@ -1,15 +1,21 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 
-export default function Home({navigation}){
+
+
+
+export default function Home({navigation}) { 
+
+    
 
     return (
-       <View style={styles.container}>
-           <Text style={styles.textTitulo}>Bem Vindo</Text>
-           <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.button}><Text style={styles.text}>Voltar ao login</Text></TouchableOpacity>
+        <View style={styles.container}>
+            <Text style={styles.textTitulo}>Bem Vindo</Text>
+           {/* <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.button}><Text style={styles.text}>Voltar ao login</Text></TouchableOpacity>*/}
         </View>
     )
-} 
+}  
+
 
 const styles = StyleSheet.create({
     container: {
@@ -42,5 +48,6 @@ const styles = StyleSheet.create({
         marginBottom: 30,
         color: '#778899'
     }
+
 
 })
