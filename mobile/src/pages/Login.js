@@ -8,7 +8,7 @@ export default function Login({navigation}){
            <Text style={styles.textTitulo}>Login</Text>
            <TextInput style={styles.input} placeholder='Login'></TextInput>
            <TextInput style={styles.input} placeholder='Senha'></TextInput>   
-           <TouchableOpacity onPress={() => navigation.navigate('Drawer')} style={styles.button}><Text style={styles.text}>Entrar</Text></TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.button}><Text style={styles.text}>Entrar</Text></TouchableOpacity>
         </View>
     )
 } 
