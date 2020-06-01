@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Image, TouchbleOpacity} from 'react-native'
+import {View, Image, TouchableOpacity} from 'react-native'
 import {createAppContainer, NavigationActions} from 'react-navigation'
 import {createDrawerNavigator} from 'react-navigation-drawer'
 import {createStackNavigator} from 'react-navigation-stack'
@@ -10,6 +10,7 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 import ExternalScreen from './pages/ExternalScreen'
 import NavigationDrawerStructure from './pages/NavigationDrawerStructure'
+import MenuRight from './pages/MenuRight'
 
 
 const Vestido_StackNavigator = createStackNavigator({
@@ -18,7 +19,7 @@ const Vestido_StackNavigator = createStackNavigator({
         navigationOptions: ({navigation}) => ({
             title: 'Vestido',
             headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
-            headerRight: () => <Image style={{width: 25, height: 25, marginRight: 8}} source={require('../src/assets/supermercado.png')} />
+            headerRight: () => <MenuRight navigationProps={navigation} /> 
         })
     }
 })
@@ -29,7 +30,7 @@ const Cropped_StackNavigator = createStackNavigator({
         navigationOptions: ({navigation}) => ({
             title: 'Cropped',
             headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
-            headerRight: () => <Image style={{width: 25, height: 25, marginRight: 8}} source={require('../src/assets/supermercado.png')} />
+            headerRight: () => <MenuRight navigationProps={navigation} /> 
         })
     }
 })
@@ -40,8 +41,7 @@ const Home_StackNavigation = createStackNavigator({
         navigationOptions: ({navigation}) => ({
             title: 'Home',
             headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
-            headerRight: () => <Image style={{width: 25, height: 25, marginRight: 8}} source={require('../src/assets/supermercado.png')} />,
-            headerRight: () => <Image style={{width: 20, height: 20, marginRight: 40}} source={require('../src/assets/procurar.png')} />
+            headerRight: () => <MenuRight navigationProps={navigation} /> 
         })
     }
 })
